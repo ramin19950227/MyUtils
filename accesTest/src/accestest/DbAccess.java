@@ -15,17 +15,16 @@ public class DbAccess {
 
             String tableName = "User";
 
-            String createTable = "CREATE TABLE " + tableName
-                    + " (id Integer, name Text(32))";
-
-            s.execute(createTable);
-
-            System.out.println("CREATED");
-
+//            String createTable = "CREATE TABLE " + tableName
+//                    + " (id Integer, name Text(32))";
+//
+//            s.execute(createTable);
+//
+//            System.out.println("CREATED");
 //            
             // enter value into table
             for (int i = 0; i < 25; i++) {
-                String addRow = "INSERT INTO " + tableName + " VALUES ( " + i + ", 'r')";
+                String addRow = "INSERT INTO " + tableName + "(name) VALUES ('r')";
                 s.execute(addRow);
             }
 
