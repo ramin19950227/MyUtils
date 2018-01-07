@@ -21,6 +21,11 @@ public class Test {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        try {
+            Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+        } catch (ClassNotFoundException ex) {
+            System.err.println("Class.forName error");
+        }
 
         Connection conn;
 
